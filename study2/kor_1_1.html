@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제주도</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/kor_1_1.jpg" style="width:40vw;height:100vh;float:left">
+		<h1>성산일출봉</h1>
+			제주도 하면 떠오르는것중 하나인 성산일출봉.<br>
+			성산일출봉은 자연의 신비를 볼수있어 관광객의 발걸음이 끊이지 않는곳으로 제주의 대표적인 관광지중 한군데 입니다.<br/>
+			성산일출봉은 다른 오름과는 달리 마그마가 물속에서 분출하면서 만들어진 수성화산체(다른 오름과 달리 일출봉이 얕은 바다속에서 분출한 수중 폭발 화산) 입니다.<br/>
+			관람료는 개인 기준 어른은 2,000원 청소년 과 군인,어린이는 1,000원 이며
+			매표 시간은 <br>07:00시 ~19:00시 까지 이며 관람시간은 매표시간보다 한시간 긴 07:00~20:00시 까지입니다.<br>
+			보통 정상까지 올라가는데 걸리는 시간은 약 50분 정도 소요되는 편이고 계절마다 풍경이 바뀌기 때문에 전에 가봤더라도 다른 계절에 한번더 가보는것을 추천 합니다.
+		</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./kor_1_1.html"><li><h1>1.성산일출봉</h1></li></a>
+				<a href="./kor_1_2.html"><li><h1>2.</h1></li></a>
+				<a href="./kor_1_3.html"><li><h1>3.</h1></li></a>
+				<a href="./kor_1_4.html"><li><h1>4.</h1></li></a>
+				<a href="./kor_1_5.html"><li><h1>5.</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
