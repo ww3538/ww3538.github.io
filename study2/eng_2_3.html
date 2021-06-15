@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>런던</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/eng_2_3.jpg" style="width:40vw;height:100vh;float:left">
+		<h1>빅벤</h1>
+		빅 벤은 런던의 대표적인 상징물로 런던 웨스트민스터 의회의사당 동쪽 끝에 있는 종탑 시계이다.<br>
+		그림소프 남작 에드먼드 베켓이 설게한 이 시게는 정확하기로 유명하며 무게나 13t이나 나가는 종으로도 유명하다.<br>
+		빅 벤이라는 이름은 1859년 이 시계를 설치할때 공사 위임자 벤저민 홈 경의 이름을 딴 것으로, 원래는 종의 이름이었으나 지금은 시계를 가리키는 말이 되었다.<br>
+		런던 여행에서 빠질 수 없는 코스이나 아쉽게도 지금은 종소리를 들을 순 없다.<br>
+		160여년간 운영되어 왔던 빅 벤이 노후화되면서 여러 문제가 생김에 따라, 2017년부터 2021년까지 약 4년동안 보수 공사가 진행될 에정이다.<br>
+		한화 약480억원의 예산을 투입해 지붕의 부식을 막고 석조 구조물의 누수도 봉쇄하며 내부의 엘리베이터를 설치하는 등의 작업이 이뤄진다.<br>
+		이때 4면에 부착된 시게도 임시 분해를 걸쳐 보수 작업이 진행이 되는 등 대공사가 이루어져 2017년 8월 21일 정오를 마지막으로 빅 벤은 종을 치지 않게 되었다.<br>
+		</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./eng_2_1.html"><li><h1>1.버킹엄 궁전</h1></li></a>
+				<a href="./eng_2_2.html"><li><h1>2.런던아이</h1></li></a>
+				<a href="./eng_2_3.html"><li><h1>3.빅벤</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

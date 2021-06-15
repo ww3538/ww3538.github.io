@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요크</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/eng_3_3.jpg" style="width:40vw;height:100vh;float:left">
+		<h1>국립 철도 박물관</h1>
+		100대가 넘는 차량, 방대한 도서관과 놀이 공간을 갖춘 이 박물관에서는 200년에 달하는 영국의 철도 역사에 대해 알아볼 수 있습니다.<br>
+		국립 철도 박물관에서는 지난 200여 년간 이어져 온 영국의 흥미로운 철도 역사를 살펴볼 수 있습니다. <br>
+		박물관의 전시물은 철도 교통에 따라 사회가 어떻게 변화하고 발전했는지를 직접적으로 보여줍니다.<br>
+		이 박물관에는 마차철도, 증기 기관차, 왕립 철도 객차에 이르는 약 100대의 철도 차량이 전시되어 있습니다.<br>
+		국립 철도 박물관은 요크 도심에 있는 주 철도역 근처에 자리잡고 있습니다.<br>
+		철도역 근처에는 세인트 메리 수도원, 요크 미술관, 클리포드 타워를 비롯한 많은 명소가 있습니다.
+		</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./eng_3_1.html"><li><h1>1.요르빅 바이킹 센터</h1></li></a>
+				<a href="./eng_3_2.html"><li><h1>2.요크 민스터</h1></li></a>
+				<a href="./eng_3_3.html"><li><h1>3.국립 철도 박물관</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

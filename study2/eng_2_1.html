@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>런던</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/eng_2_1.jpg" style="width:40vw;height:100vh;float:left">
+		<h1>버킹엄 궁전</h1>
+		'버킹엄 궁전'은 1762년 조지 2세가 '버킹엄 공작'의 저택을 구입하면서 왕실 거주지로 사용되기 시작했다.
+		1837년 빅토리아 여왕이 즉위하고 나서는 영국 국왕이 상주하는 궁전이 되었고, 현재 엘리자베스 여왕도 이곳에서 거주하고 있다.
+		궁전 내부에는 2만m²의 호수를 포함해 약 17만m²에 이르는 대정원, 그리고 무도회장, 음악당, 미술관, 접견실과 도서관 등이 들어서있다. 
+		버킹엄 궁의 방수는 알현실 19개, 손님용 침실 52개, 스태프용 침실 188개, 사무실 92개, 욕실 78개를 포함하여 총 775개이다.
+		 궁전에 근무하는 사람의 수는 약 450명, 연간 초대객은 4만 명이나 된다고 한다. 
+		왕족들을 보필하는 시종 50명은 같은 궁에 머물며, 기타 다른 시종들은 왕실 마구간인 로열 뮤스(Royal Mews)에 기거한다. 
+		더불어 궁전의 내외 호위를 담당하는 왕실 근위병 교대식은 볼거리로 매우 유명하다.
+		</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./eng_2_1.html"><li><h1>1.버킹엄 궁전</h1></li></a>
+				<a href="./eng_2_2.html"><li><h1>2.런던아이</h1></li></a>
+				<a href="./eng_2_3.html"><li><h1>3.빅벤</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

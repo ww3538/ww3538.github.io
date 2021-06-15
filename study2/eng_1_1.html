@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리버풀</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/eng_1_1.png" style="width:40vw;height:100vh;float:left">
+		<h1>안필드</h1>
+		YNWA 을 응원가로 쓰는 잉글랜드 프리미어 리그 팀 리버풀 의 홈구장으로 개인적으로 제일 가보고싶은곳이다.<br>
+		원정팀의 지옥이라고 불리는 안필드는 좌석수 54,074석 이며 잉글랜드 구장중 7번째로 많은 좌석 수를 가진 구장이다.<br>
+		물론 최근에 홈 6연패를 하긴 했지만 그 전까지는 68경기 리그 무패행진을 하며 연승을 하고있었다.<br>
+		관중이 가득차있는 안필드에서 관중들의 응원가 부르는것은 티비를 통해서도 보고있는 나까지 거기에 있는거처럼 느껴질정도로<br>
+		팬들의 뜨거운 분위기 까지가 안필드 라고 할수있다.<br>
+		현재 코로나로 인해서 경기중에 관중이 들어갈수 없다.
+		</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./eng_1_1.html"><li><h1>1.안필드</h1></li></a>
+				<a href="./eng_1_2.html"><li><h1>2.리버풀 대성당</h1></li></a>
+				<a href="./eng_1_3.html"><li><h1>3.워커아트 갤러리</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

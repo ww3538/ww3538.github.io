@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마드리드</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/spa_2_2.jpg" style="width:40vw;height:100vh;float:left">
+		<h1>프라도 미술관</h1>
+			프라도 미술관은 1785년 카를로스 3세에 의해 건설되기 시작했는데 원래는 자연과학 박물관이 될 예정이었다.<br>
+			설계를 담당했던 사람은 당시 스페인의 대표적인 건축가 후안 데 비야누에바였다.<br>
+			그러나 나폴레옹과의 전쟁으로 인해 공사가 중단되었고, 전후에는 페르난도 7세에 의해 스페인 왕가의 미술품을 소장하는 미술관으로 계획이 변경되었다.<br>
+			스페인 왕가의 방대한 컬렉션을 기반으로 한 왕실 전용 갤러리가 국립 미술관이 된 뒤에도 귀중한 미술품의 수집은 현재까지 계속되고 있다.<br>
+			작품 구성을 보면 역시 스페인 회화 부문이 충실하다.<br>
+			스페인 회화의 3대 거장으로 불리는 엘 그레코, 고야, 디에고 벨라스케스를 비롯해 16~17세기 스페인 회화의 황금기에 활약했던 화가들의 주옥같은 작품들이 감탄을 자아낸다.<br>
+			또한 스페인 왕실과 관계가 깊었던 네덜란드의 플랑드르파 작품도 많고, 르네상스 시대의 거장인 라파엘로와 보티첼리 등 이탈리아 회화 작품도 충실하다.<br>
+			그 외에 독일, 프랑스 등 유럽 회화의 걸작, 고대의 조각 작품군도 전시되어 있어 천천히 관람한다면 하루는 족히 소요된다.<br>
+			프라도 미술관에는 문이 3개 있는데 각각의 문에는 고야, 벨라스케스, 무리요의 동상이 입장하는 관람객을 맞이하듯이 서 있다. <br>
+			보안 검색 때문에 입장할 때 시간이 걸리기도 한다.<br>
+			관내에서는 촬영을 금지하고 있으며 큰 짐은 보관소에 맡길 수 있다.<br>
+		
+			</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./spa_2_1.html"><li><h1>1.마드리드 왕궁</h1></li></a>
+				<a href="./spa_2_2.html"><li><h1>2.프라도 미술관</h1></li></a>
+				<a href="./spa_2_3.html"><li><h1>3.산티아고 베르나배우</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

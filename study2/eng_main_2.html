@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<style type = "text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+body {
+	overflow: hidden;
+}
+
+div {
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+#bg_div {
+	height: 100vh;
+	width: 100vw
+}
+
+#hd_div {
+	height: 10vh;
+	width: 100vw;
+}
+
+#ft_div {
+	height: 7vh;
+	width: 100vw;
+}
+
+#bd_div {
+	height: 83vh;
+	width: 100vw;
+}
+a {
+	text-decoration: none
+}
+/*메뉴 버튼*/
+#menu {
+	font: bold 25px "malgun gothic";
+	background: gray;
+	color: black;
+	line-height: 50px;
+	text-align: center;
+	height: 10vh;
+	width: 100vw;
+}
+
+#menu>ul>li {
+	z-index: 2;
+	float: left;
+	width: 180px;
+	position: relative;
+	left: 500px
+}
+
+#menu>ul>li>ul {
+	width: 130px;
+	display: none;
+	position: absolute;
+	font-size: 14px;
+	background: skyblue;
+}
+
+#menu>ul>li:hover>ul {
+	display: block;
+}
+
+#menu>ul>li>ul>li:hover {
+	background: orange;
+	transition: ease 1s;
+}
+</style>
+</head>
+<body>
+	<div id="bg_div">
+		<div id="menu">
+			<div id = "aa" style = "float: left; border:0px solid gray"><h2>가고싶은 여행지</h2></div>
+			<ul>
+				<li><a href="./kor_main.html">한국</a>
+					<ul>
+						<li><a href="./kor_main_1.html">제주도</a></li>
+						<li><a href="./kor_main_2.html">경주</a></li>
+						<li><a href="./kor_main_3.html">가평</a></li>
+					</ul>
+				</li>
+				<li><a href="./eng_main.html">영국</a>
+					<ul>
+						<li><a href="./eng_main_1.html">리버풀</a></li>
+						<li><a href="./eng_main_2.html">런던</a></li>
+						<li><a href="./eng_main_3.html">요크</a></li>
+					</ul>
+				</li>
+				<li><a href="./spa_main.html">스페인</a>
+					<ul>
+						<li><a href="./spa_main_1.html">바르셀로나</a></li>
+						<li><a href="./spa_main_2.html">마드리드</a></li>
+						<li><a href="./spa_main_3.html">발렌시아</a></li>
+					</ul>
+				</li>
+				<li><a href = "./index.html">메인 페이지로</li>
+			</ul>
+		</div>
+		<div id="bd_div">
+			<iframe src="./eng_2_1.html" name="main" width="100%" height="100%" frameborder="1">
+			</iframe>
+		</div>
+		<div id="ft_div">
+			<h1>made by 20210931민진홍</h1>
+		</div>
+	</div>
+</body>
+</html>

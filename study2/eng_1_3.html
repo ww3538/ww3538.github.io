@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>워커아트 갤러리</title>
+<style type="text/css">
+ul li {
+	list-style: none;
+	text-align:center;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+input[id="menuicon"] {
+	display: none;
+}
+
+input[id="menuicon"]+ul {
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .35s;
+	text-align: right;
+}
+
+input[id="menuicon"]+ul>li {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #f1f1f1;
+	position: relative;
+	margin-top: -1px;
+}
+
+A:link {
+	color:#000000
+}
+
+A:visited{
+	color:#000000
+}
+
+A:active{
+	color:#000000
+}
+
+A:hover{
+	color:#000000
+}
+a{
+	text-decoration:none;
+}
+
+input[id="menuicon"]+ul>li>a {
+	display: block;
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li>label {
+	display: block;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	background: #dadada;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	border-radius: 30px;
+	background: #333;
+	transition: all .35s;
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input[id="menuicon"]+ul>li:nth-child(2) a .icon {
+	background: url('./img/search.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]+ul>li:nth-child(3) a .icon {
+	background: url('./img/sand-clock.png') center center no-repeat;
+	background-size: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+input[id="menuicon"]:checked+ul {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+	z-index: 2;
+	right: 300px;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1)
+	{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2)
+	{
+	opacity: 0;
+}
+
+input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3)
+	{
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+	width: 300px;
+	height: 100%;
+	background: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 1;
+	transition: all .35s;
+}
+
+input[id="menuicon"]:checked+ul+div {
+	right: 0;
+}
+</style>
+</head>
+<body>
+	<div style="width:100%; height:80vh">
+		<div style="width:100%; height:20vh">
+		<img src="./img/eng_1_3.png" style="width:40vw;height:100vh;float:left">
+		<h1>워커아트 갤러리</h1>
+		영국에서 가장 큰 예술 기관 중 하나인 워커 미술관은 "북부의 국립 미술관"이라는 애칭으로 불리며 라파엘전파에서 뱅크시에 이르는 다양한 작품을 전시하고 있습니다.<br>
+		미술관 투어의 시작점이 되는 1번 룸에는 중세와 르네상스 시대의 작품이 전시되어 있는데, 얀 모스타르트의 젊은 남자의 초상과 헨리 8세의 근엄한 초상화가 특히 유명합니다.<br>
+		레이튼의 광야의 엘리야 , 로제티의 단테의 꿈 등의 명화를 관람할 수 있는 하이 빅토리안 룸도 꼭 들러보세요. 인상파 룸에는 모네, 드가, 세잔의 걸작이 걸려 있습니다.<br>
+		11번 룸에서는 영국의 거장인 루치안 프로이트와 L.S. 로리의 작품을 감상하고 양방향 소통형 연대표를 따라 1880~1950년 영국 미술의 역사를 차근차근 알아보실 수 있습니다.<br>
+		좀 더 최근 작품을 보려면 12번 룸을 방문해 보시면 됩니다.<br>
+		영국에서 가장 유명한 회화 공모전인 "존 무어스 프라이즈"에서 수상한 많은 작품을 보실 수 있는데, 이 공모전은 2년마다 워커 미술관에서 전시회를 여는 것으로 대미를 장식합니다.<br>
+		
+		</div>
+		<input type="checkbox" id="menuicon">
+		<ul>
+			<li><label for="menuicon"> 
+				<span></span>
+				<span></span>
+				<span></span>
+			</label></li>
+		</ul>
+
+		<div class="sidebar">
+			<ul>
+				<a href="./eng_1_1.html"><li><h1>1.안필드</h1></li></a>
+				<a href="./eng_1_2.html"><li><h1>2.리버풀 대성당</h1></li></a>
+				<a href="./eng_1_3.html"><li><h1>3.워커아트 갤러리</h1></li></a>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
